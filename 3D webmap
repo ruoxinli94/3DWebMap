@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title> My 3D WebMap </title>
+<link rel="stylesheet" href="https://js.arcgis.com/4.0beta3/esri/css/main.css">
+<script src="https://js.arcgis.com/4.0beta3/"></script>
+
+<script>
+require(
+["esri/views/SceneView",
+"esri/portal/PortalItem",
+"esri/WebScene",
+"dojo/domReady!"
+],function(
+SceneView,PortalItem,WebScene
+){
+		var scene = new WebScene({
+		portalItem: new PortalItem({
+		id : "f397e01eed5548379baccd8e819eb58c"})
+		});
+		var view = new SceneView({
+		map:scene,
+		container:"map1"});
+});
+</script>
+<style>html,body,#map1{
+padding:0;
+margin:0;
+}
+</style>
+ </head>
+ 
+ <body>
+	<div id="map1"></div>
+ </body>
+</html>
